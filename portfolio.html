@@ -10,12 +10,16 @@
         color: red;
       }
       .box {
-        border: 1.5px solid #000000;
+        border: 3px solid #bfff10;
         padding: 30px;
-        margin: 20px;
-        background: #03c7e0;
+        margin: 70px;
+        background: #333;
         color: rgb(250, 249, 249);
-        border-radius: 10%;
+        border-radius: 0%;
+        width: 80vw;
+        height: 9vw;
+        margin-top: 17px;
+        margin-left: 56px;
       }
       .PARA {
         color: rgb(0, 0, 0);
@@ -49,12 +53,35 @@
 
         display: inline-block;
       }
+      nav {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+      nav a.active {
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
     <div class="box">
-      <nav class="navbar navbar-expand-lg navbar-light container-fluid bar"
-      <h1 class="headline" style="text-align: center">PORTFOLIO</h1>
+      <h1 class="headline" style="display: flex; justify-content: center">
+        PORTFOLIO
+      </h1>
+      <nav>
+        <a href="#" class="adtive">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#"> SERVICES</a>
+        <a href="#"> CONTACT</a>
+      </nav>
     </div>
     <div
       class="First_page"
