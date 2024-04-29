@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>🌟PORTFOLIO🌟</title>
     <style>
-      .First_page {
-        background-color: rgb(37, 160, 150);
-        color: red;
-      }
       .box {
         border: 1.5px solid #000000;
         padding: 10px;
@@ -20,6 +16,7 @@
       .PARA {
         color: rgb(0, 0, 0);
       }
+
       @keyframes moveText {
         0% {
           transform: translateY(0);
@@ -32,23 +29,14 @@
         }
       }
 
-      .First_page {
-        animation: moveText 2s infinite;
-      }
       .para {
+        color: #ffffff;
+        border-bottom: 3px solid black;
+        padding-bottom: 5px;
         font-size: 20px;
-      }
-      .para {
         font-weight: normal;
       }
-      .About {
-        border: 2px solid;
-        padding: 20px;
-        margin: 20px;
-        background-color: cadetblue;
 
-        display: inline-block;
-      }
       .contact-form {
         max-width: 400px;
         margin: 0 auto;
@@ -77,12 +65,18 @@
         cursor: pointer;
       }
       nav {
-        background-color: #333;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #c29797;
         color: #fff;
         padding: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: 0px;
+        padding-bottom: 0px;
       }
 
       nav a {
@@ -95,175 +89,259 @@
       nav a.active {
         font-weight: bold;
       }
+      nav a.active:hover {
+        background: #dbff3c;
+        transform: scale(1);
+      }
 
-      nav a:hover {
-        transform: scale(1.3);
+      .container {
+        color: #fff;
+        padding: 20px;
+        border-radius: 20px;
+        padding-bottom: 4px;
+        padding-top: 2px;
+      }
+
+      #SIZE {
+        margin: 0;
+        font-size: 32px;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        border-top-width: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+      }
+      body {
+        background-image: url("https://.unsplash.com/photo-1639565770091-55e1de87e749?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8N3w4OTE2MDE1fHxlbnwwfHx8fHw%3D"); /* Specify the URL of the image */
+        background-size: cover; /* Cover the entire background */
+        background-repeat: no-repeat; /* Do not repeat the background image */
+        background-position: center; /* Center the background image */
+      }
+
+      /* Additional styles for the content */
+      .content {
+        padding: 20px;
+        color: #fff;
+        text-align: center;
+      }
+
+      .skill {
+        margin-bottom: 10px;
+      }
+
+      .skills {
+        margin-top: 20px;
+      }
+
+      .skill-label {
+        margin-bottom: 5px;
+      }
+
+      .progress {
+        background-color: #f0f0f0;
+        border-radius: 10px; /* Rounded corners */
+        height: 10px; /* Height of the progress bar */
+        overflow: hidden; /* Hide overflowing content */
+      }
+
+      .progress-bar {
+        width: 70%; /* Initial width of the progress bar */
+        height: 100%; /* Height of the progress bar */
+        background: linear-gradient(
+          to right,
+          #4caf50,
+          #00ff00
+        ); /* Gradient fill */
+        border-radius: 10px; /* Match container's border radius */
       }
     </style>
   </head>
   <body>
     <nav>
       <div>
-        <h1>My Website</h1>
+        <h1>PORTFOLIO</h1>
       </div>
       <div>
         <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a href="#" class="active">About</a>
+        <a href="#" class="active">Services</a>
+        <a href="#" class="active">Contact</a>
       </div>
     </nav>
-    <div style="background-color: rgb(189, 160, 166)">
-      <div
-        class="First_page"
-        style="
-          display: flex;
-          justify-content: space-evenly;
-          border: 6px solid;
-          margin: 40px;
-        "
-      >
-        <h1 id="Intro" style="padding-top: 230px">
-          I AM A SOFTWARE ENGINEER
+    <div
+      class="First_page"
+      style="display: flex; justify-content: space-evenly"
+    >
+      <h1 id="Intro" style="padding-top: 230px">
+        I AM A SOFTWARE ENGINEER
+        <style>
+          @font-face {
+            font-family: myCustomFont;
+            src: url(path_to_your_font_file.ttf);
+          }
+          #Intro {
+            font-family: myCustomFont, sans-serif;
+            font-size: 36px;
+            color: #c5b5b5;
+          }
+        </style>
+      </h1>
+      <img
+        src="C:\Users\Namrata Soundatte\OneDrive\Desktop\VS CODE\c3bab6b4e77c5d34b7f66c7ea007c46d.jpg"
+        align="right"
+        height="500px"
+        width="350vh"
+        style="padding: 60px"
+      />
+    </div>
+    <div>
+      <div class="container" style="border-radius: 20px">
+        <h1 class="SIZE">
+          About Me
           <style>
             @font-face {
               font-family: myCustomFont;
               src: url(path_to_your_font_file.ttf);
             }
-            #Intro {
+            #SIZE {
               font-family: myCustomFont, sans-serif;
               font-size: 36px;
-              color: #333;
+              color: #c5b5b5;
             }
           </style>
         </h1>
-        <img
-          src="https://static.india.com/wp-content/uploads/2023/05/K2-KARAKORAM-PAKISTAN-CHINA-8611M-1.jpg"
-          align="right"
-          height="500px"
-          width="250vh"
-          style="border-radius: 25%; padding: 50px"
-        />
       </div>
-      <div style="display: flex; justify-content: center">
-        <div style="width: 70vw; background-color: #03c7e0; border: 2px solid">
-          <h1 class="About" style="border: 2px solid">About Me</h1>
-          <p class="para" style="border: 2px solid">
-            I am a Software Engineer. I am pursuing now Bachelor's Degree in
-            Computer Science and Engineering. In Vishveshwarya Technical Campus.
-            I am Currently working on the project In ITINFO ACADEMY SANGLI.
-          </p>
+      <div>
+        <p class="para">
+          I am a Software Engineer. I am pursuing now Bachelor's Degree in
+          Computer Science and Engineering. In Vishveshwarya Technical Campus. I
+          am Currently working on the project In ITINFO ACADEMY SANGLI.
+        </p>
+      </div>
+    </div>
+    <div class="container" style="border-radius: 20px">
+      <h1>SKILL</h1>
+    </div>
+    <div class="skills">
+      <div class="skill">
+        <span class="skill-label">HTML</span>
+        <div class="progress">
+          <div class="progress-bar"></div>
         </div>
       </div>
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          border: 2px solid;
-          margin: 40px;
-          background-color: rgb(138, 223, 223);
-        "
-      >
-        <div style="width: 80vw">
-          <h1
+      <div class="skill">
+        <span class="skill-label">CSS</span>
+        <div class="progress">
+          <div
+            class="progress-bar"
             style="
-              border: 2px solid;
-              padding: 2%;
-              background-color: rgb(67, 184, 184);
+              width: 60%;
+              background: linear-gradient(to right, #ff5733, #ffc300);
             "
-          >
-            Skill
-          </h1>
-          <p
-            class="PARA"
-            style="border: 2px solid; background-color: rgb(63, 199, 204)"
-          >
-            <strong>Language:</strong> Advance: C, C++ | Intermediate : Python,
-            Java, Data Analytics | Novice : JavaScript.<br />
-            <strong>Technologies:</strong> HTML, CSS, BOOTSTRAP, SQL | Data
-            Science | AWS(Basics)
-          </p>
+          ></div>
         </div>
       </div>
-      <h1>PROJECT</h1>
-      <div
-        style="
-          display: flex;
-          justify-content: space-evenly;
-          border: 4px solid rgb(208, 243, 8);
-          margin: 40px;
-          background-color: salmon;
-        "
-      >
-        <div
-          style="
-            display: flex;
-            justify-content: center;
-            border: 4px solid;
-            margin: 40px;
-            padding: 65px;
-            background-color: gold;
-          "
-        >
-          <h1>PROJECT TITLE</h1>
-        </div>
-        <div
-          style="
-            display: flex;
-            justify-content: space-evenly;
-            border: 4px solid;
-            margin: 40px;
-            background-color: gold;
-          "
-        >
-          <p>* * * * * * * * * * * * * * * *</p>
-          <p>* * * * * * * * * * * * * * * *</p>
+      <div class="skill">
+        <span class="skill-label">JavaScript</span>
+        <div class="progress">
+          <div
+            class="progress-bar"
+            style="
+              width: 50%;
+              background: linear-gradient(to right, #4286f4, #00ffff);
+            "
+          ></div>
         </div>
       </div>
+    </div>
+    <div class="container" style="border-radius: 20px"><h1>PROJECT</h1></div>
 
+    <div
+      style="
+        display: flex;
+        justify-content: space-evenly;
+        border: 4px solid rgb(208, 243, 8);
+        margin: 40px;
+      "
+    >
       <div
         style="
           display: flex;
           justify-content: center;
           border: 4px solid;
           margin: 40px;
-          padding: 20px;
-          background-color: sandybrown;
-          border-radius: 20px;
+          padding: 65px;
+          background-color: gold;
         "
       >
-        <h1>---------------------</h1>
+        <h1>PROJECT TITLE</h1>
       </div>
-      <h1>EXPERIENCE</h1>
       <div
         style="
           display: flex;
-          justify-content: center;
-          border: 4px solid rgba(64, 11, 88, 0.815);
+          justify-content: space-evenly;
+          border: 4px solid;
           margin: 40px;
-          padding: 20px;
-          background-color: lightgreen;
-          border-radius: 20px;
+          background-color: gold;
         "
       >
-        <h1>- - - - - - - - - - - -</h1>
-      </div>
-      <h1>CONTACT</h1>
-      <div class="contact-form" style="background-color: rgb(134, 125, 125)">
-        <h2>Contact Us</h2>
-        <form action="#" method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email:</label>
-          <input type="text" id="email" name="email" required />
-
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-
-          <input type="submit" value="Submit" />
-        </form>
+        <p>* * * * * * * * * * * * * * * *</p>
+        <p>* * * * * * * * * * * * * * * *</p>
       </div>
     </div>
+
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        border: 4px solid;
+        margin: 40px;
+        padding: 20px;
+        background-color: sandybrown;
+        border-radius: 20px;
+      "
+    >
+      <h1>---------------------</h1>
+    </div>
+    <h1>EXPERIENCE</h1>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        border: 4px solid rgba(64, 11, 88, 0.815);
+        margin: 40px;
+        padding: 20px;
+        background-color: lightgreen;
+        border-radius: 20px;
+      "
+    >
+      <h1>- - - - - - - - - - - -</h1>
+    </div>
+    <h1>CONTACT</h1>
+    <div class="contact-form" style="background-color: rgb(134, 125, 125)">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    <footer class="footer"><p>&copy; 2024 POR TFOLIO</p></footer>
   </body>
 </html>
