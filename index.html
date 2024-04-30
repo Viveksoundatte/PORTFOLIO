@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #e79334;
+        background-image: url(backgorund.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+      :root {
+        --primary-color: #1b1f24;
+        --primary-color-hover: #274049;
+        --primary-light-color: #22282f;
+        --primary-theme-color: #12bdff;
+        --primary-white: #1c1b1b;
+        --primary-yellow: #ffba53;
+        --primary-yellow-hover: #ff8f8f;
+        --primary-grey: #969595;
+      }
+
+      .blue-span {
+        color: var(--primary-theme-color);
+      }
+
+      .grey-span {
+        color: var(--primary-grey);
+      }
+
+      .btn {
+        margin-top: 7px;
+        font-weight: 900;
+        padding: 5px 10px;
+        background-color: var(--primary-color);
+        color: var(--primary-theme-color);
+        border: 2px solid var(--primary-theme-color);
+        border-radius: 10px;
+      }
+
+      .btn:hover {
+        box-shadow: 2px 2px 10px var(--primary-theme-color);
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--primary-white);
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      input[type="color"] {
+        border: none;
+      }
+
+      input[type="color"]::-webkit-color-swatch-wrapper {
+        padding: 0;
+      }
+
+      input[type="color"]::-webkit-color-swatch {
+        border: none;
+      }
+
+      @font-face {
+        font-family: myCustomFONT;
+        src: url(path_to_your_font_file.ttf);
+      }
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4%;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 100%;
+        margin: 0 auto;
+      }
+
+      .navbar .logo a {
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .navbar .links {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 30px;
+      }
+
+      .navbar .links a {
+        font-weight: 500;
+        text-decoration: none;
+        color: #4da765;
+        padding: 10px 0;
+        transition: 0.2s ease;
+      }
+
+      .navbar .links a:hover {
+        color: #4798e4;
+      }
+
+      #intro {
+        font-family: myCustomFont, sans-serif;
+        font-size: 36px;
+        color: black;
+      }
+
+      .about {
+        border: 2px solid transparent;
+        position: relative;
+        animation: borderAnimation 2s linear infinite;
+        padding: 3%;
+        margin-left: 5%;
+        margin-right: 5%;
+
+        .para {
+          font-size: medium;
+        }
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      .language {
+        margin-bottom: 40px;
+        color: #e22121;
+      }
+
+      h2 {
+        color: #333;
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      li {
+        padding: 10px;
+        background-color: #f9f9f9;
+        margin-bottom: 5px;
+      }
+
+      footer {
+        background-color: #ff8505;
+        color: #220c0c;
+        text-align: center;
+        padding: 10px 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      header {
+        background-color: #ff85056e;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      main {
+        padding: 20px;
+      }
+
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      h2 {
+        color: #333;
+        text-align: center;
+      }
+
+      form {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      .about-me {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+
+      .social-icons {
+        font-size: 24px;
+      }
+      .social-icons a {
+        margin-right: 10px;
+        color: #333;
+      }
+
+      .my-skill {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .circular--portrait {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+
+      .circular--portrait img {
+        width: 100%;
+        height: auto;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+
+      .skill {
+        width: 200px;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .skill h2 {
+        color: #2fe16d;
+        background-color: #0c0c0c;
+        margin-bottom: 10px;
+      }
+
+      .progress-bar {
+        background-color: #ddd;
+        height: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .progress {
+        height: 100%;
+        background-color: #333;
+      }
+
+      .contact-section {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+
+      .contact-info {
+        width: 45%;
+      }
+
+      .social-links h2,
+      .contact-info h2 {
+        margin-bottom: 10px;
+      }
+
+      .social-links ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .social-links ul li {
+        margin-bottom: 5px;
+      }
+
+      .social-links ul li a {
+        text-decoration: none;
+        color: #333;
+      }
+
+      .contact-info p {
+        font-weight: bold;
+      }
+
+      .contact-section {
+        margin-bottom: 4%;
+      }
+
+      .instagram-section {
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .instagram-icon img {
+        width: 100px;
+        /* Adjust icon size as needed */
+      }
+
+      .instagram-link a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #405de6;
+        /* Instagram brand color */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .fa {
+        padding: 20px;
+        font-size: 30px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+      }
+
+      .fa-instagram {
+        background: #125688;
+        color: white;
+      }
+
+      .fa-twitter {
+        background: #55acee;
+        color: white;
+      }
+
+      .contact-section {
+        background-color: var(--primary-light-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 60px 80px;
+      }
+
+      .contact-section h1 {
+        color: var(--primary-white);
+      }
+
+      .contact-section form {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        padding: 20px;
+      }
+
+      .contact-section form input,
+      textarea {
+        margin: 10px 0;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        resize: none;
+        outline: none;
+      }
+
+      .about {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .my-project {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .expi {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .hero-section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 95vh;
+        padding: 0 15px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .hero-section .hero {
+        max-width: 50%;
+        color: #fff;
+      }
+      .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: #cd1010;
+      }
+
+      .hero-section .img {
+        width: 517px;
+      }
+
+      .hero-section .buttons {
+        margin-top: 40px;
+      }
+
+      .hero-section .buttons a {
+        text-decoration: none;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 0.375rem;
+        font-weight: 600;
+        transition: 0.2s ease;
+        display: inline-block;
+      }
+
+      .hero-section .buttons a:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      .buttons .join {
+        background-color: #9047e4;
+      }
+
+      .hero-section .buttons .learn {
+        border: 1px solid #fff;
+        border-radius: 0.375rem;
+      }
+
+      .hero-section .buttons a:hover {
+        background-color: #9047e4;
+      }
+
+      #menu-toggle {
+        display: none;
+      }
+
+      #hamburger-btn {
+        font-size: 1.8rem;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+        order: 1;
+      }
+
+      @media screen and (max-width: 1023px) {
+        .navbar .logo a {
+          font-size: 1.5rem;
+        }
+
+        .links {
+          position: fixed;
+          left: -100%;
+          top: 75px;
+          width: 100%;
+          height: 100vh;
+          padding-top: 50px;
+          background: #175d69;
+          flex-direction: column;
+          transition: 0.3s ease;
+        }
+
+        .navbar #menu-toggle:checked ~ .links {
+          left: 0;
+        }
+
+        .navbar #hamburger-btn {
+          display: block;
+        }
+
+        .header .buttons {
+          display: none;
+        }
+
+        .hero-section .hero {
+          max-width: 100%;
+          text-align: center;
+        }
+
+        .hero-section img {
+          display: none;
+        }
+      }
+
+      .container {
+        padding-bottom: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero1">
+      <header class="header">
+        <nav class="navbar">
+          <h2 class="logo"><a href="#">PORTFOLIO</a></h2>
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" id="hamburger-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M3 12h18M3 6h18M3 18h18"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </label>
+          <ul class="links">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#my-skills">Skills</a></li>
+            <li><a href="#my-project">Project</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <section class="hero-section">
+      <div class="hero">
+        <h2>Web Developer</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo,
+          veritatis blanditiis tempora nostrum placeat facere magni in,
+          recusandae delectus dolorem animi voluptas ducimus. Accusantium sed,
+          eum dolorum eos est cupiditate.
+        </p>
+        <div class="buttons">
+          <a href="#" class="join">Join Now</a>
+          <a href="#contact-us" class="learn">Contact Us</a>
+        </div>
+
+        <div class="container">
+          <h1>Follow Us</h1>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/vivek_soundatte/#">
+              <a href="https://www.instagram.com/vivek_soundatte/#"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="img">
+        <img
+          src="port.jpg"
+          style="height: 500px; width: 500px"
+          alt="hero image"
+        />
+      </div>
+    </section>
+    <main>
+      <div id="about" class="about">
+        <h1>About Me</h1>
+      </div>
+      <section class="about-me">
+        <div class="circular--portrait">
+          <img src="c3bab6b4e77c5d34b7f66c7ea007c46d.jpg" />
+        </div>
+        <div class="text">
+          <h2>Hello, I'm Vivek Soundatte</h2>
+          <p>
+            I'm a web developer passionate about creating engaging and
+            user-friendly web experiences.
+          </p>
+        </div>
+      </section>
+    </main>
+    <div id="my-skill" class="my-skill">
+      <h1>My Skills</h1>
+    </div>
+    <main>
+      <section class="skills-list">
+        <div class="skill">
+          <h2>HTML</h2>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h2>CSS</h2>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h2>JavaScript</h2>
+          <div class="progress-bar">
+            <div class="progress" style="width: 65%"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <h2>C++</h2>
+          <div class="progress-bar">
+            <div class="progress" style="width: 75%"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="my-project" class="my-project">
+      <h1>My Projects</h1>
+    </div>
+    <main>
+      <section class="project">
+        <h2>Project : Dynamic Website</h2>
+        <p>
+          A Dynamic Website by using different languages like HTML, CSS,
+          JavaScript and PHP.
+        </p>
+        <a href="#" class="btn">View Project</a>
+      </section>
+    </main>
+
+    <div class="expi">
+      <h1>Experience</h1>
+    </div>
+    <main>
+      <section class="language">
+        <h2>Proficient</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+      <section class="language">
+        <h2>Intermediate</h2>
+        <ul>
+          <li>Python</li>
+          <li>C++</li>
+        </ul>
+      </section>
+      <section class="language">
+        <h2>Beginner</h2>
+        <ul>
+          <li>Node.Js</li>
+          <li>PHP</li>
+        </ul>
+      </section>
+    </main>
+    <div id="contact-us" class="contact-us">
+      <section class="contact-section" id="contact">
+        <h1><span class="blue-span">Contact Me</span></h1>
+        <form action="#">
+          <input type="text" name="userName" placeholder="Your Name" />
+          <input type="email" name="email" placeholder="Email" />
+          <textarea
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+          <button class="submit-btn">Submit</button>
+        </form>
+      </section>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
